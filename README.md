@@ -23,6 +23,28 @@ inventory, employees and payments.
 
 ---
 
+## Screenshots
+
+### Public site
+
+| Landing page | Services |
+|--------------|----------|
+| ![Landing page](screenshots/landing-page.png) | ![Services section](screenshots/services-section.png) |
+
+### Login & booking
+
+| Login | Appointment booking |
+|-------|---------------------|
+| ![Login page](screenshots/login-page.png) | ![Appointment booking modal](screenshots/appointment-booking-modal.png) |
+
+### Dashboards
+
+| Admin dashboard | Vet dashboard |
+|-----------------|---------------|
+| ![Admin dashboard](screenshots/admin-dashboard.png) | ![Vet dashboard](screenshots/vet-dashboard.png) |
+
+---
+
 ## Prerequisites
 
 Install these before you start:
