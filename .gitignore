@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Environment variables / secrets
+.env
+*.env
+backend/.env
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Runtime / build artifacts
+dist/
+build/
+coverage/
+*.pid
+
+# Uploads (runtime-generated)
+backend/uploads/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+.idea/

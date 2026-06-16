@@ -1,0 +1,128 @@
+@font-face {
+    font-display: block;
+    font-family: "bootstrap-icons";
+    src: url("fonts/bootstrap-icons.woff2") format("woff2"), url("fonts/bootstrap-icons.woff") format("woff");
+}
+
+.bi::before,
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+    display: inline-block;
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -.125em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.bi-droplet-fill::before {
+    content: "\f2e7";
+}
+
+.bi-calendar-check::before {
+    content: "\f1a8";
+}
+
+.bi-heart-fill::before {
+    content: "\f2d1";
+}
+
+.bi-calendar-plus::before {
+    content: "\f1a9";
+}
+
+.bi-person::before {
+    content: "\f4d7";
+}
+
+.bi-envelope::before {
+    content: "\f32f";
+}
+
+.bi-telephone::before {
+    content: "\f5e3";
+}
+
+.bi-paw::before {
+    content: "\f4c7";
+}
+
+.bi-tags::before {
+    content: "\f5e0";
+}
+
+.bi-tag::before {
+    content: "\f5df";
+}
+
+.bi-pencil::before {
+    content: "\f4cb";
+}
+
+.bi-envelope-paper::before {
+    content: "\f32e";
+}
+
+.bi-check-circle::before {
+    content: "\f26a";
+}
+
+.bi-check-circle-fill::before {
+    content: "\f26b";
+}
+
+.bi-info-circle::before {
+    content: "\f431";
+}
+
+.bi-clock::before {
+    content: "\f293";
+}
+
+.bi-file-medical::before {
+    content: "\f35d";
+}
+
+.bi-shield-check::before {
+    content: "\f53a";
+}
+
+.bi-sticky::before {
+    content: "\f5a3";
+}
+
+.bi-calendar-date::before {
+    content: "\f1a7";
+}
+
+.bi-calendar-check::before {
+    content: "\f1a8";
+}
+
+.bi-house::before {
+    content: "\f425";
+}
+
+.bi-printer::before {
+    content: "\f4f9";
+}
+
+.bi-lock::before {
+    content: "\f33e";
+}
+
+.bi-heart::before {
+    content: "\f417";
+}
+
+.bi-list-check::before {
+    content: "\f37a";
+}
+
+.bi-calendar::before {
+    content: "\f1a3";
+}

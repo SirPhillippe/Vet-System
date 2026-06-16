@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawfect Care - Veterinary Services</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.webp">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2ecc71">
+    <script>
+        // Automatically update the year in the footer
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("currentYear").textContent = new Date().getFullYear();
+        });
+    </script>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#home">
+                <img src="assets/images/logo.webp" alt="Pawfect Care Logo" class="logo-gif">
+                <span class="ms-2 fs-2 fw-bold">Pawfect Care</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                    <li class="nav-item">
+                        <a class="btn btn-light ms-3 shadow-sm" href="pages/login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Home Section -->
+    <section id="home" class="hero fade-in">
+        <div class="container text-center text-white">
+            <h1 class="display-3 fw-bold">Welcome to Pawfect Care</h1>
+            <p class="motto fs-4">"Caring for your pets like family!"</p>
+            <a href="pages/book-appointment.html" class="btn btn-light btn-lg mt-3 shadow">Book an Appointment</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="container text-center mt-5 fade-in">
+        <h2 class="section-title">Our Veterinary Services</h2>
+        <p>Providing expert care for your pets with love and dedication.</p>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <img src="assets/images/checkup.jpg" alt="Pet Checkups" class="service-img">
+                <h4>Pet Checkups</h4>
+                <p>Regular health checkups to ensure your pet stays healthy.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="assets/images/vaccinations.jpg" alt="Vaccinations" class="service-img">
+                <h4>Vaccinations</h4>
+                <p>Essential vaccinations for a disease-free life.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="assets/images/grooming.webp" alt="Grooming" class="service-img">
+                <h4>Grooming</h4>
+                <p>Keep your pet looking and feeling great.</p>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <img src="assets/images/surgery.jpg" alt="Surgery" class="service-img">
+                <h4>Surgery</h4>
+                <p>Expert surgical procedures ensuring the best outcomes for your pet's health.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="assets/images/dental-care.jpg" alt="Dental Care" class="service-img">
+                <h4>Dental Care</h4>
+                <p>Advanced dental care for pets, including cleaning and oral treatments.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="assets/images/lab-testing.jpg" alt="Laboratory Testing" class="service-img">
+                <h4>Laboratory Testing</h4>
+                <p>Comprehensive diagnostics to detect illnesses early and ensure proper treatment.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- About Section -->
+    <section id="about" class="container text-center mt-5 fade-in">
+        <h2 class="section-title">About Us</h2>
+        <p>
+            At Pawfect Care, we are dedicated to providing top-notch veterinary services with love and professionalism. Our expert team ensures that your pets receive the best care possible.
+        </p>
+    </section>
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="container text-center mt-5">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <img src="assets/images/client1.jpg" alt="Client 1" class="testimonial-img">
+                    <h4>Jane Doe</h4>
+                    <p>"Pawfect Care took such good care of my dog! Highly recommend!"</p>
+                    <div class="testimonial-icons">
+                        <a href="https://wa.me/1234567890" target="_blank"><img src="assets/images/whatsapp.png" alt="WhatsApp"></a>
+                        <a href="https://www.facebook.com/janedoe" target="_blank"><img src="assets/images/facebook.png" alt="Facebook"></a>
+                        <a href="https://www.linkedin.com/in/janedoe" target="_blank"><img src="assets/images/linkedin.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <img src="assets/images/client2.jpg" alt="Client 2" class="testimonial-img">
+                    <h4>John Smith</h4>
+                    <p>"The vets here are amazing! My cat is healthier than ever."</p>
+                    <div class="testimonial-icons">
+                        <a href="https://wa.me/1234567891" target="_blank"><img src="assets/images/whatsapp.png" alt="WhatsApp"></a>
+                        <a href="https://www.facebook.com/johnsmith" target="_blank"><img src="assets/images/facebook.png" alt="Facebook"></a>
+                        <a href="https://www.linkedin.com/in/johnsmith" target="_blank"><img src="assets/images/linkedin.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <img src="assets/images/client3.jpg" alt="Client 3" class="testimonial-img">
+                    <h4>Lisa Johnson</h4>
+                    <p>"Great service! The team is friendly and professional."</p>
+                    <div class="testimonial-icons">
+                        <a href="https://wa.me/1234567892" target="_blank"><img src="assets/images/whatsapp.png" alt="WhatsApp"></a>
+                        <a href="https://www.facebook.com/lisajohnson" target="_blank"><img src="assets/images/facebook.png" alt="Facebook"></a>
+                        <a href="https://www.linkedin.com/in/lisajohnson" target="_blank"><img src="assets/images/linkedin.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <img src="assets/images/client4.jpg" alt="Client 4" class="testimonial-img">
+                    <h4>Michael Brown</h4>
+                    <p>"I love how they treat pets with so much love and care!"</p>
+                    <div class="testimonial-icons">
+                        <a href="https://wa.me/1234567893" target="_blank"><img src="assets/images/whatsapp.png" alt="WhatsApp"></a>
+                        <a href="https://www.facebook.com/michaelbrown" target="_blank"><img src="assets/images/facebook.png" alt="Facebook"></a>
+                        <a href="https://www.linkedin.com/in/michaelbrown" target="_blank"><img src="assets/images/linkedin.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <img src="assets/images/client5.webp" alt="Client 5" class="testimonial-img">
+                    <h4>Emily Davis</h4>
+                    <p>"Highly recommended for any pet owners. Fantastic experience!"</p>
+                    <div class="testimonial-icons">
+                        <a href="https://wa.me/1234567894" target="_blank"><img src="assets/images/whatsapp.png" alt="WhatsApp"></a>
+                        <a href="https://www.facebook.com/emilydavis" target="_blank"><img src="assets/images/facebook.png" alt="Facebook"></a>
+                        <a href="https://www.linkedin.com/in/emilydavis" target="_blank"><img src="assets/images/linkedin.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <img src="assets/images/client6.jpg" alt="Client 6" class="testimonial-img">
+                    <h4>David Wilson</h4>
+                    <p>"The best vet clinic I've ever been to. My dog loves them!"</p>
+                    <div class="testimonial-icons">
+                        <a href="https://wa.me/1234567895" target="_blank"><img src="assets/images/whatsapp.png" alt="WhatsApp"></a>
+                        <a href="https://www.facebook.com/davidwilson" target="_blank"><img src="assets/images/facebook.png" alt="Facebook"></a>
+                        <a href="https://www.linkedin.com/in/davidwilson" target="_blank"><img src="assets/images/linkedin.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="container text-center mt-5">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <img src="assets/images/location.png" alt="Location" class="contact-icon">
+                <p>11 ave Herbert Chitepo, Bulawayo, Zimbabwe</p>
+            </div>
+            <div class="col-md-4">
+                <img src="assets/images/phone.png" alt="Phone" class="contact-icon">
+                <p><a href="tel:+1234567890" class="contact-link">+263 78 840 0208</a></p>
+            </div>
+            <div class="col-md-4">
+                <img src="assets/images/email.png" alt="Email" class="contact-icon">
+                <p><a href="mailto:pawfectcare@gmail.com" class="contact-link">pawfectcare@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Links -->
+
+    <div class="social-icons mt-4">
+        <a href="https://www.facebook.com" target="_blank" class="social-icon">
+            <img src="assets/images/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com" target="_blank" class="social-icon">
+            <img src="assets/images/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://www.twitter.com" target="_blank" class="social-icon">
+            <img src="assets/images/x.png" alt="Twitter X">
+        </a>
+    </div>
+
+
+
+
+    <!-- Customer Query Form -->
+    <section class="container text-center mt-5">
+        <h2 class="section-title">Send Us a Query</h2>
+        <div id="queryForm">
+            <input type="text" id="queryName" class="form-control mb-2" placeholder="Your Name" required>
+            <input type="email" id="queryEmail" class="form-control mb-2" placeholder="Your Email" required>
+            <textarea id="queryMessage" class="form-control mb-2" placeholder="Your Message" required></textarea>
+            <button type="button" id="submitQuery" class="btn btn-primary w-100">Send</button>
+        </div>
+    </section>
+    
+    </section>
+
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Pawfect Care. All rights reserved.</p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <img src="assets/images/up-arrow.png" alt="Back to Top">
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+    <script src="query.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            var navbarCollapse = document.getElementById('navbarNav');
+            navLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth < 992 && navbarCollapse.classList.contains('show')) {
+                        var bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+                        bsCollapse.hide();
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

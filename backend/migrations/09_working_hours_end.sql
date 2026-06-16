@@ -1,0 +1,3 @@
+-- Working hours end stays at 17:00 (closing time).
+-- Last bookable slot is enforced in code as 1 hour before closing (16:00).
+-- No DB change needed.

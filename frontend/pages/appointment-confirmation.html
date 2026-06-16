@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Confirmation - Pawfect Care</title>
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
+    <link href="../assets/css/appointments.css" rel="stylesheet">
+    <link href="../assets/icons/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                <img src="../assets/images/logo.webp" alt="Pawfect Care Logo" class="logo-gif">
+                <span class="ms-2 fs-2 fw-bold">Pawfect Care</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow appointment-form">
+                    <div class="card-body p-4">
+                        <h2 class="text-center mb-3">
+                            <i class="bi bi-check-circle-fill text-success"></i> Appointment Confirmed
+                        </h2>
+                        <div id="appointmentDetails" class="appointment-details">
+                            <!-- Details will be populated by JavaScript -->
+                        </div>
+
+                        <!-- Important Information Section -->
+                        <div class="important-notes mt-3">
+                            <h4 class="mb-2"><i class="bi bi-info-circle"></i> Important Information</h4>
+                            <ul class="notes-list">
+                                <li><i class="bi bi-clock"></i> Please arrive 10 minutes before your appointment time</li>
+                                <li><i class="bi bi-file-medical"></i> Bring any previous medical records if available</li>
+                                <li><i class="bi bi-shield-check"></i> Ensure your pet is properly restrained</li>
+                                <li><i class="bi bi-telephone"></i> Call us if you need to reschedule or cancel</li>
+                                <li><i class="bi bi-envelope"></i> Please check your email for a confirmation message</li>
+                            </ul>
+                        </div>
+
+                        <div class="text-center mt-3">
+                            <button class="btn btn-primary me-2" id="downloadReceiptBtn">
+                                <i class="bi bi-download"></i> Download Receipt
+                            </button>
+                            <a href="../index.html" class="btn btn-outline-primary">
+                                <i class="bi bi-house"></i> Return to Home
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/config.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+                    const appointmentData = JSON.parse(localStorage.getItem('appointmentData'));
+                    if (!appointmentData) {
+                        window.location.href = 'book-appointment.html';
+                        return;
+                    }
+
+                    const detailsHtml = `
+                <div class="confirmation-details">
+                    <div class="detail-item">
+                        <i class="bi bi-person"></i>
+                        <strong>Client:</strong> ${appointmentData.client_name}
+                    </div>
+                    <div class="detail-item">
+                        <i class="bi bi-envelope"></i>
+                        <strong>Email:</strong> ${appointmentData.client_email}
+                    </div>
+                    <div class="detail-item">
+                        <i class="bi bi-telephone"></i>
+                        <strong>Phone:</strong> ${appointmentData.client_phone}
+                    </div>
+                    <div class="detail-item">
+                        <i class="bi bi-paw"></i>
+                        <strong>Pet:</strong> ${appointmentData.pet_name}
+                    </div>
+                    ${appointmentData.pet_age !== null && appointmentData.pet_age !== undefined ? `
+                    <div class="detail-item">
+                        <i class="bi bi-clock"></i>
+                        <strong>Pet Age:</strong> ${(function(age) { const m = Math.round(parseFloat(age)*12); const y = Math.floor(m/12); const mo = m%12; if(!y) return mo+' mo'; if(!mo) return y+' yr'+(y!==1?'s':''); return y+' yr'+(y!==1?'s':'')+' '+mo+' mo'; })(appointmentData.pet_age)}
+                    </div>
+                    ` : ''}
+                    <div class="detail-item">
+                        <i class="bi bi-tag"></i>
+                        <strong>Type:</strong> ${appointmentData.pet_type}
+                    </div>
+                    <div class="detail-item">
+                        <i class="bi bi-tag"></i>
+                        <strong>Breed:</strong> ${appointmentData.pet_breed}
+                    </div>
+                    <div class="detail-item">
+                        <i class="bi bi-calendar-check"></i>
+                        <strong>Service:</strong> ${appointmentData.service}
+                    </div>
+                    <div class="detail-item">
+                        <i class="bi bi-calendar-date"></i>
+                        <strong>Date:</strong> ${new Date(appointmentData.appointment_date).toLocaleDateString()}
+                    </div>
+                    <div class="detail-item">
+                        <i class="bi bi-clock"></i>
+                        <strong>Time:</strong> ${appointmentData.appointment_time}
+                    </div>
+                    ${appointmentData.notes ? `
+                        <div class="detail-item">
+                            <i class="bi bi-sticky"></i>
+                            <strong>Notes:</strong> ${appointmentData.notes}
+                        </div>
+                    ` : ''}
+                </div>
+                ${appointmentData.receipt_number ? `
+                <hr>
+                <h4 class="mb-2"><i class="bi bi-receipt"></i> Payment Receipt</h4>
+                <div class="confirmation-details">
+                    <div class="detail-item">
+                        <i class="bi bi-hash"></i>
+                        <strong>Receipt Number:</strong> ${appointmentData.receipt_number}
+                    </div>
+                    <div class="detail-item">
+                        <i class="bi bi-credit-card"></i>
+                        <strong>Payment Method:</strong> ${appointmentData.payment_method}
+                    </div>
+                    <div class="detail-item">
+                        <i class="bi bi-upc-scan"></i>
+                        <strong>Payment Reference:</strong> ${appointmentData.payment_reference}
+                    </div>
+                    <div class="detail-item">
+                        <i class="bi bi-cash-coin"></i>
+                        <strong>Amount Paid:</strong> $${appointmentData.amount_paid}
+                    </div>
+                </div>
+                ` : ''}
+            `;
+
+            document.getElementById('appointmentDetails').innerHTML = detailsHtml;
+
+            // Wire the Download Receipt button to the backend PDF endpoint
+            const downloadBtn = document.getElementById('downloadReceiptBtn');
+            if (appointmentData.appointment_id) {
+                downloadBtn.addEventListener('click', function() {
+                    window.location.href = `${window.API_BASE_URL}/appointments/${appointmentData.appointment_id}/receipt`;
+                });
+            } else {
+                // No id available (older booking) — fall back to the browser print dialog
+                downloadBtn.addEventListener('click', function() { window.print(); });
+            }
+        });
+    </script>
+</body>
+
+</html>

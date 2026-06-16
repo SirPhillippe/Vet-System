@@ -1,0 +1,14 @@
+{
+    "name": "Pawfect Care",
+    "short_name": "Pawfect",
+    "description": "Your trusted veterinary clinic",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#2ecc71",
+    "icons": [{
+        "src": "assets/images/logo.webp",
+        "sizes": "192x192",
+        "type": "image/webp"
+    }]
+}

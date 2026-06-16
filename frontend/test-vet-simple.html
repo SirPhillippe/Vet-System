@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vet Dashboard Test</title>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/vet/dashboard.js"></script>
+</head>
+
+<body>
+    <h1>Vet Dashboard JavaScript Test</h1>
+    <p>If you see this page and no errors in console, the JavaScript is working!</p>
+    <p>API_BASE_URL: <span id="api-url"></span></p>
+    <p>getToken function: <span id="token-func"></span></p>
+
+    <script>
+        console.log('Test page loaded successfully');
+        document.getElementById('api-url').textContent = window.API_BASE_URL || 'Not defined';
+        document.getElementById('token-func').textContent = typeof getToken;
+
+        // Test if key functions are defined
+        console.log('getToken function:', typeof getToken);
+        console.log('API_BASE_URL:', window.API_BASE_URL);
+        console.log('getPaymentStatusColor function:', typeof getPaymentStatusColor);
+
+        // Test the function that had the syntax error
+        try {
+            const result = getPaymentStatusColor('paid');
+            console.log('getPaymentStatusColor test:', result);
+        } catch (error) {
+            console.error('getPaymentStatusColor error:', error);
+        }
+    </script>
+</body>
+
+</html>
